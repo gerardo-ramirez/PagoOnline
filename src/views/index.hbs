@@ -1,0 +1,46 @@
+
+<div class="row">
+
+    <div class="col-md-4 mx-auto">
+        <div class="card">
+            <img src="software.jpg" alt="imagen de ejemplo" class="card-img-top">
+            <div class="card-body">
+                <h2>$30,00</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat molestias porro sunt numquam, nulla nesciunt!
+                </p>
+                
+            </div>
+            <div class="card-footer">
+                <!-- Usamos Stripe para metodos de pago 
+                con stripe no nos preocupamos por los datos sensibles del usuario
+                poruqe los maneja stripe
+                ********************************-->
+
+                <form action="/envio" method="POST">
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="pk_test_brJoPYa0VxnG7n7OX6BMvipa00L4d5kR99"
+    data-amount="3000"
+    data-name="PagoOnline"
+    data-description="Widget"
+    data-image="/logo.jpg"
+    data-locale="auto">
+  </script>
+<!-- Voy a ocultar el boton a traves de un script
+quedara atras del boton buy -->
+<script>
+    document.getElementsByClassName('stripe-button-el')[0].style.display = 'none';
+</script>
+
+  <button class="btn btn-dark btn-block">Buy <i class="fas fa-shopping-cart"></i></button>
+</form>
+
+<!-- ************************************************************************* -->
+                  
+
+
+                </div>
+        </div>
+    </div>
+</div>
